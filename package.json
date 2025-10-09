@@ -1,0 +1,28 @@
+{
+  "name": "fullstackopen_part3",
+  "version": "1.0.0",
+  "description": "Part 3",
+  "homepage": "https://github.com/alitaloviivi/FullstackOpen_part3#readme",
+  "bugs": {
+    "url": "https://github.com/alitaloviivi/FullstackOpen_part3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alitaloviivi/FullstackOpen_part3.git"
+  },
+  "license": "MIT",
+  "author": "Viivi Alitalo",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
