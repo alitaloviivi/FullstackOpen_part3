@@ -1,0 +1,11 @@
+### Get all persons
+GET http://localhost:3001/api/persons
+
+### Get one person
+GET http://localhost:3001/api/persons/2
+
+### Delete one person
+DELETE http://localhost:3001/api/persons/2
+
+### Check if it was deleted
+GET http://localhost:3001/api/persons
