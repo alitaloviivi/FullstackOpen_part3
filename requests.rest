@@ -16,3 +16,22 @@ Content-Type: application/json
   "name": "Viivi Alitalo",
   "number": "0452889933"
 }
+
+### Test 'name or number missing' error
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Viivi Alitalo",
+  "number": ""
+}
+
+### Test 'name must be unique' error
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Mary Poppendieck",
+  "number": "0452889933"
+}
+

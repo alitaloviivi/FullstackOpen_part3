@@ -53,8 +53,16 @@ app.post('/api/persons', (request, response) => {
   
     if (!body.name || !body.number) {
       return response.status(400).json({ 
-        error: 'content missing' 
+        error: 'name or number missing' 
       })
+    }
+
+    const samePerson = persons.some(person => person.name.toLowerCase() === body.name.toLowerCase())
+    
+    if (samePerson) {
+        return response.status(400).json({ 
+          error: 'name must be unique'
+        })
     }
   
     const generateId = Math.floor(Math.random() * 1000000).toString()
@@ -67,7 +75,7 @@ app.post('/api/persons', (request, response) => {
   
     persons = persons.concat(person)
   
-    response.json(person)
+    response.status(201).json(person)
 })
 
 app.get('/info', (req, res) => {
