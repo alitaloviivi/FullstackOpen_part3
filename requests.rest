@@ -2,10 +2,16 @@
 GET http://localhost:3001/api/persons
 
 ### Get one person
-GET http://localhost:3001/api/persons/2
+GET http://localhost:3001/api/persons/68ef6c8231da3b0ba7facaad
 
-### Delete one person
-DELETE http://localhost:3001/api/persons/2
+### Delete one person CHANGE ID
+DELETE http://localhost:3001/api/persons/68ef6c8231da3b0ba7facaad
+
+### Test 400 error
+GET http://localhost:3001/api/persons/68ef65
+
+### Test 404 error
+GET http://localhost:3001/api/persons/68ef6576d4622a62c3266f19
 
 
 ### Create a new person
@@ -14,7 +20,16 @@ Content-Type: application/json
 
 {
   "name": "Viivi Alitalo",
-  "number": "0452889933"
+  "number": "045-2889933"
+}
+
+### Put
+PUT http://localhost:3001/api/persons/68ef6eb4f6c7632cd8d713b4
+Content-Type: application/json
+
+{
+  "name": "Viivi Alitalo",
+  "number": "123-456-789"
 }
 
 ### Test 'name or number missing' error
