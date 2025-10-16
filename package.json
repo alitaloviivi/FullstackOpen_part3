@@ -19,7 +19,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../FullstackOpen/osa2/phonebook && npm run build && cp -r dist ../../FullstackOpen_part3",
-    "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push",
+    "lint": "eslint ."
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -28,6 +29,10 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0",
     "nodemon": "^3.1.10"
   }
 }
